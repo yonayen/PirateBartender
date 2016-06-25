@@ -1,1 +1,80 @@
-/* font-family: 'Lato', sans-serif; */
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-image: url("../images/bg_pattern.svg");
+	background-repeat: repeat-x;
+	opacity: 0.4;	
+	background-size: cover;
+}
+
+/* --- Title for QuizApp --- */
+
+.title {
+	font-size: 4rem;
+	text-align: center;
+	margin: 0em auto;
+	font-family: 'Lato', sans-serif;
+	color: #EE7785;
+}
+
+/* --- Container that houses Q&As --- */
+
+.container {
+	background-color: #FFF;
+	background-image: url("../images/bg-waves.png");
+	background-repeat: repeat-x;
+	width: 600px;
+	height: 650px;
+	margin: 0.5em auto;
+	font-family: 'Exo 2', sans-serif;
+	text-align: center;
+	padding: 0.5em 2em;
+	border-radius: 1.5em;
+	box-sizing: border-box;
+	box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+
+/* --- Question --- */
+
+.question-title {
+	margin: 0.1em auto;
+	font-size: 3em;
+	color: #66CCFF;
+	text-shadow: 2px 1px #B0B0B0;
+}
+
+/* --- Options --- */
+
+.question-options {
+	margin: 1em auto;
+	list-style-type: none;
+	text-transform: uppercase;
+}
+
+.question-options > li {
+	border: 0.5px solid #FFF;
+	margin-bottom: 1.2em;
+	padding: 0.4em 1em;
+	border-radius: 1.3em;
+	margin-right: 1.2em;
+	margin-left: 1.2em;
+	font-size: 1.6rem;
+	background-color: #F7F7F7;
+	color: #B0B0B0;
+}
+
+li:hover {
+	border: 1px solid #F7F7F7;
+	background-color: #66CCFF;
+	color: #FFF;
+}
+
+.final-page {
+	color: #B0B0B0;
+	font-size: 2em;
+	font-weight: bold;
+}
+
