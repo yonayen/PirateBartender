@@ -1,3 +1,10 @@
+
+
+
+
+
+// jQuery Functionality 
+
 $(document).ready(function() {
 	loadQuestions(); // Questions start at pageLoad.
 });
@@ -26,4 +33,51 @@ function restartQuestions()
 function updateQuestionTitle(title)
 {
 	$(".question-title").text(title);
+}
+
+function updateQuestionOptions(optionsArray,correct)
+{
+	for(var i=0; i<optionsArray.length;i++)
+	{
+		//["Shake of bitters", "splash of tonic", "twist of lemon peel"],
+		//       0                    1                    2
+
+		if()
+		{
+			
+		}
+		$(".question-options").append('<li class=' + '</li>');
+	}
+}
+
+function nextQuestion()
+{
+	currentQuestion++;
+
+	if (currentQuestion < options.length)
+	{
+		showNextQuestion();
+	}
+	else
+	{
+		showFinalDrink();
+
+	}
+}
+
+function showNextQuestion()
+{
+	$(".question-options").empty();
+
+	updateQuestionTitle(options[currentQuestion].question);
+	updateQuestionOptions(options[currentQuestion].answers, options[currentQuestion].type);
+}
+
+function showFinalDrink()
+{
+	$(".question-title").text("Here's Your Drink!");
+
+	$(".question-options").one("click", ".answer", function() {
+		loadQuestions();
+	});
 }
