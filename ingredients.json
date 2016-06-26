@@ -2,23 +2,28 @@
 
 "options" : [{
 	"question": "Do ye like yer drinks strong?",
-	"strong": ["Glug of rum", "slug of whisky", "splash of gin"],
+	"ingredients": ["Glug of rum", "slug of whisky", "splash of gin"],
+	"type": "strong"
 },
 {
 	"question": "Do ye like it with a salty tang?",
-	"salty": ["Olive on a stick", "salt-dusted rim", "rasher of bacon"],
+	"ingredients": ["Olive on a stick", "salt-dusted rim", "rasher of bacon"],
+	"type": "salty"
 },
 {
 	"question": "Would ye like a bit of sweetness with yer poison?",
-	"sweet": ["Sugar cube", "spoonful of honey", "splash of cola"],
+	"ingredients": ["Sugar cube", "spoonful of honey", "splash of cola"],
+	"type": "sweet"
 },
 {
 	"question": "Are ye a lubber who likes it bitter?",
-	"bitter": ["Shake of bitters", "splash of tonic", "twist of lemon peel"],
+	"ingredients": ["Shake of bitters", "splash of tonic", "twist of lemon peel"],
+	"type": "bitter"
 },
 {
 	"question": "Are ye one for a fruity finish?",
-	"fruity": ["Slice of orange", "dash of cassis", "cherry on top"],
+	"ingredients": ["Slice of orange", "dash of cassis", "cherry on top"],
+	"type": "fruity"
 }]
 
 }

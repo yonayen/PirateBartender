@@ -1,10 +1,25 @@
-function Ingredients(name, ingredients) {
+function Ingredients (name, type) {
 	this.name = name;
-	this.ingredients = ingredients;
+	this.type = type;
 }
 
 function Questions () {
-	
+
+}
+
+function Drink () {
+	this.ingredients = [];
+}
+
+Drink.prototype.addIngredient = function (ingredient) {
+	this.ingredients.push(ingredients);
+}
+
+Drink.prototype.getDrinkType = function () {
+	var drinkType = 'yer drink is ';
+	for (var i = 0; i < this.ingredients.length; i++;) {
+		drinkType += this.ingredients[i].type + ' ';
+	} 
 }
 
 
@@ -88,3 +103,13 @@ function showFinalDrink()
 		loadQuestions();
 	});
 }
+
+/*
+ 1- Bartender asks questions (yes or no)
+ 2- If yes, save the type and select (randomly) one of the ingredients
+ 3- 
+*/
+
+
+
+
