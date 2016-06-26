@@ -1,4 +1,11 @@
+function Ingredients(name, ingredients) {
+	this.name = name;
+	this.ingredients = ingredients;
+}
 
+function Questions () {
+	
+}
 
 
 
