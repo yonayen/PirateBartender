@@ -5,7 +5,7 @@ body {
 	padding: 0;
 	background-image: url("../images/bg_pattern.svg");
 	background-repeat: repeat-x;
-	opacity: 0.4;	
+	opacity: 0.8;	
 	background-size: cover;
 }
 
@@ -54,7 +54,7 @@ body {
 	text-transform: uppercase;
 }
 
-.question-options > li {
+.question-options > button {
 	border: 0.5px solid #FFF;
 	margin-bottom: 1.2em;
 	padding: 0.4em 1em;
@@ -66,7 +66,7 @@ body {
 	color: #B0B0B0;
 }
 
-li:hover {
+button:hover {
 	border: 1px solid #F7F7F7;
 	background-color: #66CCFF;
 	color: #FFF;
