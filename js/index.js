@@ -7,6 +7,11 @@ function Questions () {
 
 }
 
+// Will house all the ingredients
+function Pantry () {
+
+}
+
 function Drink () {
 	this.ingredients = [];
 }
