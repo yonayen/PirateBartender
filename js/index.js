@@ -13,8 +13,12 @@ function Pantry () {
 
 }
 
+function Preferences () {
+	// Array preferences - Bool addType (String type)
+}
+
 function Bartender () {
-	// Drink - createDrink (Preferences preferencesObject) - Receives Preferences object
+	// Drink - createDrink (Preferences preferencesObject) - Receives Preferences object & Returns Drink object
 }
 
 function Drink () {
