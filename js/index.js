@@ -14,7 +14,7 @@ function Pantry () {
 }
 
 function Bartender () {
-	
+	// Drink - createDrink (Preferences preferencesObject) - Receives Preferences object
 }
 
 function Drink () {
