@@ -1,3 +1,4 @@
+// Question Object
 var Question = function (question, type) {
 	this.question = question;
 	this.type = type;
@@ -25,13 +26,18 @@ for (var i = 0; i < questionsJson.length; i++) {
 	currentQuestion.getType();
 }
 
-function Ingredients (name, type) {
+// Ingredient Object
+function Ingredient (name, type) {
 	this.name = name;
 	this.type = type;
 }
 
 Ingredient.prototype.getName = function () {
 	return this.name;
+};
+
+Ingredient.prototype.getType = function () {
+	return this.type;
 };
 
 // Will house all the ingredients
