@@ -28,6 +28,9 @@ function Bartender () {
 
 function Drink () {
 	this.ingredients = [];
+	// Array ingredients
+	// Array ingredients - getIngredients
+	// Array getTypes
 }
 
 Drink.prototype.addIngredient = function (ingredient) {
