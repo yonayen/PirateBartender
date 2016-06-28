@@ -1,8 +1,3 @@
-function Ingredients (name, type) {
-	this.name = name;
-	this.type = type;
-}
-
 var Question = function (question, type) {
 	this.question = question;
 	this.type = type;
@@ -30,6 +25,15 @@ for (var i = 0; i < questionsJson.length; i++) {
 	currentQuestion.getType();
 }
 
+function Ingredients (name, type) {
+	this.name = name;
+	this.type = type;
+}
+
+Ingredient.prototype.getName = function () {
+	return this.name;
+};
+
 // Will house all the ingredients
 function Pantry () {
 
@@ -47,20 +51,20 @@ function Bartender () {
 }
 
 function Drink () {
-	this.ingredients = [];
+	this.ingredient = [];
 	// Array ingredients
 	// Array ingredients - getIngredients
 	// Array getTypes
 }
 
 Drink.prototype.addIngredient = function (ingredient) {
-	this.ingredients.push(ingredients);
+	this.ingredient.push(ingredient);
 }
 
 Drink.prototype.getDrinkType = function () {
 	var drinkType = 'yer drink is ';
-	for (var i = 0; i < this.ingredients.length; i++;) {
-		drinkType += this.ingredients[i].type + ' ';
+	for (var i = 0; i < this.ingredient.length; i++;) {
+		drinkType += this.ingredient[i].type + ' ';
 	} 
 }
 
