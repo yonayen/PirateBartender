@@ -3,6 +3,12 @@ function Ingredients (name, type) {
 	this.type = type;
 }
 
+var Question = function (question, type) {
+	this.question = question;
+	this.type = type;
+}
+
+
 function Questions () {
 	var questions = // Array with questions
 	for (var i = 0; i < this.) 
@@ -15,11 +21,13 @@ function Questions () {
 
 // Will house all the ingredients
 function Pantry () {
+
 	// Array Items
 	// Ingredient getItemForType(String)
 }
 
 function Preferences () {
+
 	// Array preferences - Bool addType (String type)
 }
 
