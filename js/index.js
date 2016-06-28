@@ -6,20 +6,28 @@ function Ingredients (name, type) {
 var Question = function (question, type) {
 	this.question = question;
 	this.type = type;
-}
+};
 
-Question.prototype.getQuestion = function(){
+Question.prototype.getQuestion = function () {
 	return this.question;
 };
 
-function Questions () {
-	var questions = // Array with questions
-	for (var i = 0; i < this.) 
+Question.prototype.getType = function () {
+	return this.type;
+};
 
-	// String Question
-	// String Type
-	// String getQuestion()
-	// String getType()
+var questionsJson = null;
+
+$.getJSON("../ingredients.json", function(data) {
+	questionsJson = data;
+});
+
+for (var i = 0; i < questionsJson.length; i++) {
+	var currentQuestion = new Question(questionsJson[i].name, 
+									   questionsJson[i].type);
+
+	currentQuestion.getQuestion();
+	currentQuestion.getType();
 }
 
 // Will house all the ingredients
