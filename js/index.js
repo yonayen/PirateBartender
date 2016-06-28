@@ -40,11 +40,29 @@ Ingredient.prototype.getType = function () {
 	return this.type;
 };
 
-// Will house all the ingredients
-function Pantry () {
+// Drink Object
+function Drink () {
+	this.ingredient = [];
+}
 
-	// Array Items
-	// Ingredient getItemForType(String)
+Drink.prototype.addIngredient = function (ingredient) {
+	this.ingredient.push(ingredient);
+};
+
+Drink.prototype.getDrinkType = function () {
+	var drinkType = 'yer drink is ';
+	for (var i = 0; i < this.ingredient.length; i++) {
+		drinkType += this.ingredient[i].type + ' ';
+	}
+};
+
+// Pantry Object
+function Pantry () {
+	this.item = [];	// Array Items
+}
+
+Pantry.prototype.getItemForType = function () {
+	this.
 }
 
 function Preferences () {
@@ -56,23 +74,7 @@ function Bartender () {
 	// Drink - createDrink (Preferences preferencesObject) - Receives Preferences object & Returns Drink object
 }
 
-function Drink () {
-	this.ingredient = [];
-	// Array ingredients
-	// Array ingredients - getIngredients
-	// Array getTypes
-}
 
-Drink.prototype.addIngredient = function (ingredient) {
-	this.ingredient.push(ingredient);
-}
-
-Drink.prototype.getDrinkType = function () {
-	var drinkType = 'yer drink is ';
-	for (var i = 0; i < this.ingredient.length; i++;) {
-		drinkType += this.ingredient[i].type + ' ';
-	} 
-}
 
 
 /*
