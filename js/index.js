@@ -6,6 +6,11 @@ function Ingredients (name, type) {
 function Questions () {
 	var questions = // Array with questions
 	for (var i = 0; i < this.) 
+
+	// String Question
+	// String Type
+	// String getQuestion()
+	// String getType()
 }
 
 // Will house all the ingredients
