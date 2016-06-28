@@ -15,7 +15,8 @@ function Questions () {
 
 // Will house all the ingredients
 function Pantry () {
-
+	// Array Items
+	// Ingredient getItemForType(String)
 }
 
 function Preferences () {
