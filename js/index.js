@@ -8,6 +8,9 @@ var Question = function (question, type) {
 	this.type = type;
 }
 
+Question.prototype.getQuestion = function(){
+	return this.question;
+};
 
 function Questions () {
 	var questions = // Array with questions
