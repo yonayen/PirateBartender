@@ -4,12 +4,17 @@ function Ingredients (name, type) {
 }
 
 function Questions () {
-
+	var questions = // Array with questions
+	for (var i = 0; i < this.) 
 }
 
 // Will house all the ingredients
 function Pantry () {
 
+}
+
+function Bartender () {
+	
 }
 
 function Drink () {
@@ -28,7 +33,7 @@ Drink.prototype.getDrinkType = function () {
 }
 
 
-
+/*
 
 // jQuery Functionality 
 
@@ -114,6 +119,8 @@ function showFinalDrink()
  2- If yes, save the type and select (randomly) one of the ingredients
  3- 
 */
+
+
 
 
 
