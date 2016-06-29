@@ -62,12 +62,19 @@ function Pantry () {
 }
 
 Pantry.prototype.getItemForType = function () {
-	this.
+	return this.type;
 }
 
 function Preferences () {
+	this.preferences = [];
 
-	// Array preferences - Bool addType (String type)
+	$('.yes').on("click", function (){
+		// add type
+	});
+
+	$('.no').on("click", function (){
+		// don't add type?
+	});
 }
 
 function Bartender () {
