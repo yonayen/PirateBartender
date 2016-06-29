@@ -1,85 +1,39 @@
-// Question Object
-var Question = function (question, type) {
-	this.question = question;
-	this.type = type;
-};
-
-Question.prototype.getQuestion = function () {
-	return this.question;
-};
-
-Question.prototype.getType = function () {
-	return this.type;
-};
-
+var currentQuestionIndex = 0;
+var currentQuestion = null;
 var questionsJson = null;
 
-$.getJSON("../ingredients.json", function(data) {
-	questionsJson = data;
+$.getJSON('options.json', function(data) {
+	questionsJson = data.options;
+	showQuestion();
 });
 
-for (var i = 0; i < questionsJson.length; i++) {
-	var currentQuestion = new Question(questionsJson[i].name, 
-									   questionsJson[i].type);
-
-	currentQuestion.getQuestion();
-	currentQuestion.getType();
-}
-
-// Ingredient Object
-function Ingredient (name, type) {
-	this.name = name;
-	this.type = type;
-}
-
-Ingredient.prototype.getName = function () {
-	return this.name;
-};
-
-Ingredient.prototype.getType = function () {
-	return this.type;
-};
-
-// Drink Object
-function Drink () {
-	this.ingredient = [];
-}
-
-Drink.prototype.addIngredient = function (ingredient) {
-	this.ingredient.push(ingredient);
-};
-
-Drink.prototype.getDrinkType = function () {
-	var drinkType = 'yer drink is ';
-	for (var i = 0; i < this.ingredient.length; i++) {
-		drinkType += this.ingredient[i].type + ' ';
+function showQuestion () {
+	if (currentQuestionIndex < questionsJson.length) {
+		currentQuestion = new Question(questionsJson[currentQuestionIndex].name, questionsJson[currentQuestionIndex].type);
+		$('#main-container').html(currentQuestion.getQuestionView());
+	} else {
+		showDrink();
 	}
-};
-
-// Pantry Object
-function Pantry () {
-	this.item = [];	// Array Items
 }
 
-Pantry.prototype.getItemForType = function () {
-	return this.type;
+function showDrink () {
+	// Call bartender (pass allong prferences object) and call the Bartender getDrink method.
+	// Use jQuery to show this on the front end (last page)
 }
 
-function Preferences () {
-	this.preferences = [];
+// Target 'yes' class under #main-container by using second parameter
+$('#main-container').on('click', '.yes', function () {
+	alert(currentQuestion.getQuestion());
+	// Add currentQuestion type to preferences object
+	currentQuestionIndex++;
+	showQuestion();
+});
 
-	$('.yes').on("click", function (){
-		// add type
-	});
+$('#main-container').on('click', '.no', function () {
+	currentQuestionIndex++;
+	showQuestion();
+});
 
-	$('.no').on("click", function (){
-		// don't add type?
-	});
-}
-
-function Bartender () {
-	// Drink - createDrink (Preferences preferencesObject) - Receives Preferences object & Returns Drink object
-}
 
 
 
