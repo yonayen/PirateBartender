@@ -58,9 +58,11 @@ Drink.prototype.getDrinkType = function () {
 var Pantry = function () {
 	this.ingredients = {
 		"salty" : ["Olive on a stick", "salt-dusted rim", "rasher of bacon"],
+		"strong" : ["Glug of rum", "slug of whisky", "splash of gin"],
+		"sweet" :  ["Sugar cube", "spoonful of honey", "splash of cola"]
 	};
 
-}
+};
 
 Pantry.prototype.getItemForType = function () {
 	return this.type;
