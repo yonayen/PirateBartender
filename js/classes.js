@@ -57,6 +57,7 @@ Drink.prototype.getDrinkType = function () {
 // Pantry Object
 var Pantry = function () {
 	this.ingredients = {
+		"salty" : ["Olive on a stick", "salt-dusted rim", "rasher of bacon"],
 	};
 
 }
