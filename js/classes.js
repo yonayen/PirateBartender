@@ -55,8 +55,10 @@ Drink.prototype.getDrinkType = function () {
 };
 
 // Pantry Object
-function Pantry () {
-	this.item = [];	// Array Items
+var Pantry = function () {
+	this.ingredients = {
+	};
+
 }
 
 Pantry.prototype.getItemForType = function () {
