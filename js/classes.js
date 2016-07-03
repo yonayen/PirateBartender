@@ -66,6 +66,10 @@ var Pantry = function () {
 
 };
 
+Pantry.prototype.getIngredient = function (type) {
+	return this.ingredients.[type][Math.floor(Math.random()*this.ingredients[type].length)]
+}
+
 Pantry.prototype.getItemForType = function () {
 	return this.type;
 };
