@@ -75,6 +75,7 @@ Pantry.prototype.getItemForType = function () {
 };
 
 function Preferences () {
+	// Empty array to initiate preferences
 	this.preferences = [];
 }
 
