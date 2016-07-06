@@ -67,7 +67,7 @@ function Preferences () {
 	this.preferences = [];
 }
 
-function Bartender () {
+var Bartender = function () {
 	// Drink - createDrink (Preferences preferencesObject) - Receives Preferences object & Returns Drink object
 }
 
