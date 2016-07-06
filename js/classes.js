@@ -55,8 +55,19 @@ Drink.prototype.getDrinkType = function () {
 };
 
 // Pantry Object
-function Pantry () {
-	this.item = [];	// Array Items
+var Pantry = function () {
+	this.ingredients = {
+		'salty' : ['Olive on a stick', 'salt-dusted rim', 'rasher of bacon'],
+		'strong' : ['Glug of rum', 'slug of whisky', 'splash of gin'],
+		'sweet' :  ['Sugar cube', 'spoonful of honey', 'splash of cola'],
+		'bitter' : ['Shake of bitters', 'splash of tonic', 'twist of lemon peel'],
+		'fruity' : ['Slice of orange', 'dash of cassis', 'cherry on top'],
+ 	};
+
+};
+
+Pantry.prototype.getIngredient = function (type) {
+	return this.ingredients.[type][Math.floor(Math.random()*this.ingredients[type].length)]
 }
 
 Pantry.prototype.getItemForType = function () {
@@ -64,6 +75,7 @@ Pantry.prototype.getItemForType = function () {
 };
 
 function Preferences () {
+	// Empty array to initiate preferences
 	this.preferences = [];
 }
 
