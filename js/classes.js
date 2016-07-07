@@ -25,7 +25,7 @@ Question.prototype.getQuestionView = function () {
 };
 
 // Ingredient Object
-function Ingredient (name, type) {
+var Ingredient = function (name, type) {
 	this.name = name;
 	this.type = type;
 }
@@ -39,7 +39,7 @@ Ingredient.prototype.getType = function () {
 };
 
 // Drink Object
-function Drink () {
+var Drink = function () {
 	this.ingredient = [];
 }
 
@@ -51,6 +51,13 @@ Drink.prototype.getDrinkType = function () {
 	var drinkType = 'yer drink is ';
 	for (var i = 0; i < this.ingredient.length; i++) {
 		drinkType += this.ingredient[i].type + ' ';
+	}
+};
+
+Drink.prototype.getDrinkIngredients = function () {
+	var drinkIngredients = 'yer drink has ';
+	for (var i = 0; i < this.ingredient.length; i++) {
+		drinkIngredients += this.ingredient[i].name + ' ';
 	}
 };
 
@@ -67,19 +74,38 @@ var Pantry = function () {
 };
 
 Pantry.prototype.getIngredient = function (type) {
-	return this.ingredients.[type][Math.floor(Math.random()*this.ingredients[type].length)]
+	return this.ingredients[type][Math.floor(Math.random()*this.ingredients[type].length)]
 }
 
 Pantry.prototype.getItemForType = function () {
 	return this.type;
 };
 
-function Preferences () {
+var Preferences = function () {
 	// Empty array to initiate preferences
 	this.preferences = [];
 }
 
+Preferences.prototype.addPreference = function (preference) {
+	this.preferences.push(preference);
+}
+
 var Bartender = function () {
 	// Drink - createDrink (Preferences preferencesObject) - Receives Preferences object & Returns Drink object
+}
+
+Bartender.prototype.createDrink = function (user_preferences) {
+	if (user_preferences.preferences.length > 0) {
+
+		var pantry = new Pantry ();
+		var drink = new Drink ();
+
+		for (var i = 0; i < user_preferences.preferences.length; i++) {
+			var ingredient = new Ingredient (pantry.getIngredient(user_preferences.preferences[i]), user_preferences.preferences[i]);
+			drink.addIngredient(ingredient);
+		}
+
+		return drink;
+	}
 }
 

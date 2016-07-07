@@ -17,9 +17,14 @@ function showQuestion () {
 }
 
 function showDrink () {
+
+	// instance of bartender and passing 'create drink' method, passing preferences object -- will return drink to use new drink = bartender.createDrink
+	
 	// Call bartender (pass allong prferences object) and call the Bartender getDrink method.
 	// Use jQuery to show this on the front end (last page)
 }
+
+
 
 // Target 'yes' class under #main-container by using second parameter
 $('#main-container').on('click', '.yes', function () {
