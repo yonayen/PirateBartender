@@ -87,6 +87,7 @@ var Preferences = function () {
 }
 
 Preferences.prototype.addPreference = function (preference) {
+	// Receives preference from customer and adds it to empty array for later use by Bartender.
 	this.preferences.push(preference);
 }
 
