@@ -9,7 +9,9 @@ $.getJSON('options.json', function(data) {
 
 function showQuestion () {
 	if (currentQuestionIndex < questionsJson.length) {
-		currentQuestion = new Question(questionsJson[currentQuestionIndex].name, questionsJson[currentQuestionIndex].type);
+		currentQuestion = new Question(questionsJson[currentQuestionIndex].name, 
+									   questionsJson[currentQuestionIndex].type);
+
 		$('#main-container').html(currentQuestion.getQuestionView());
 	} else {
 		showDrink();
