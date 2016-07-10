@@ -19,7 +19,8 @@ function showQuestion () {
 }
 
 function showDrink () {
-	new Drink = Bartender.createDrink
+	var bartender = new Bartender (preferences) ;
+	new Drink = bartender.createDrink
 	// instance of bartender and passing 'create drink' method, passing preferences object -- will return drink to use new drink = bartender.createDrink
 	
 	// Call bartender (pass allong prferences object) and call the Bartender getDrink method.
