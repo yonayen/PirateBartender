@@ -5,18 +5,18 @@ body {
 	padding: 0;
 	background-image: url("../images/bg_pattern.svg");
 	background-repeat: repeat-x;
-	opacity: 0.8;	
+	opacity: 0.9;	
 	background-size: cover;
 }
 
 /* --- Title for QuizApp --- */
 
 .title {
-	font-size: 4rem;
+	font-size: 2.8rem;
 	text-align: center;
-	margin: 0em auto;
-	font-family: 'Lato', sans-serif;
-	color: #EE7785;
+	margin: 0.5em auto;
+	font-family: 'Raleway', sans-serif;
+	color: #8AD7ED;
 }
 
 /* --- Container that houses Q&As --- */
@@ -25,10 +25,10 @@ body {
 	background-color: #FFF;
 	background-image: url("../images/bg-waves.png");
 	background-repeat: repeat-x;
-	width: 600px;
+	width: 500px;
 	height: 650px;
-	margin: 0.5em auto;
-	font-family: 'Exo 2', sans-serif;
+	margin: 0.8em auto;
+	font-family: 'Raleway', sans-serif;
 	text-align: center;
 	padding: 0.5em 2em;
 	border-radius: 1.5em;
@@ -40,24 +40,24 @@ body {
 /* --- Question --- */
 
 .question-title {
-	margin: 0.1em auto;
+	margin: 2.1em auto;
 	font-size: 3em;
-	color: #66CCFF;
-	text-shadow: 2px 1px #B0B0B0;
+	color: #F27F82;
+/*	text-shadow: 2px 1px #B0B0B0;*/
 }
 
 /* --- Options --- */
 
 .question-options {
-	margin: 1em auto;
+	margin: 4em auto;
 	list-style-type: none;
 	text-transform: uppercase;
 }
 
 .question-options > button {
-	border: 0.5px solid #FFF;
+	border: 0.1px solid #FFF;
 	margin-bottom: 1.2em;
-	padding: 0.4em 1em;
+	padding: 0.8em 1.5em;
 	border-radius: 1.3em;
 	margin-right: 1.2em;
 	margin-left: 1.2em;
@@ -68,7 +68,7 @@ body {
 
 button:hover {
 	border: 1px solid #F7F7F7;
-	background-color: #66CCFF;
+	background-color: #B9E5F3;
 	color: #FFF;
 }
 
