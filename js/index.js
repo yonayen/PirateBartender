@@ -2,7 +2,7 @@ var currentQuestionIndex = 0;
 var currentQuestion = null;
 var questionsJson = null;
 
-$.getJSON('options.json', function(data) {
+$.getJSON('options.json', function (data) {
 	questionsJson = data.options;
 	showQuestion();
 });
@@ -16,11 +16,14 @@ function showQuestion () {
 	} else {
 		showDrink();
 	}
+
 }
 
 function showDrink () {
-	// var bartender = new Bartender (preferences) ;
-	// new Drink = bartender.createDrink;
+	var bartender = new Bartender (preferences) ;
+	var drink = bartender.createDrink();
+	var otherDrink = bartender.createDrink();
+	// drink == otherDrink // different "objects"
 	// instance of bartender and passing 'create drink' method, passing preferences object -- will return drink to use new drink = bartender.createDrink
 	
 	// Call bartender (pass allong prferences object) and call the Bartender getDrink method.
