@@ -20,11 +20,10 @@ function showQuestion () {
 }
 
 function showDrink () {
-	var bartender = new Bartender (preferences) ;
-	var drink = bartender.createDrink();
-	var otherDrink = bartender.createDrink();
-	// drink == otherDrink // different "objects"
+	var bartender = new Bartender (preferences);
 	// instance of bartender and passing 'create drink' method, passing preferences object -- will return drink to use new drink = bartender.createDrink
+	var newDrink = bartender.createDrink();
+	
 	
 	// Call bartender (pass allong prferences object) and call the Bartender getDrink method.
 	// Use jQuery to show this on the front end (last page)
