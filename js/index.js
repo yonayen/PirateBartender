@@ -25,17 +25,8 @@ function showDrink () {
 	var newDrink = bartender.createDrink(user_preferences);
 
 	// Use jQuery to display final drink
-	$('#main-container').append( function () {
-		[
-		 '<h2 class="question-title">',
-		 'You chose ',
-		  newDrink,
-		  '</h2>',
-		].join('');
-	});
+	$('#main-container').append('<h2 class="question-title">' + 'You chose ' + newDrink + '</h2>');
 }
-
-
 
 // Target 'yes' class under #main-container by using second parameter
 $('#main-container').on('click', '.yes', function () {
