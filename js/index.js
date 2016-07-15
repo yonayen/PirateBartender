@@ -30,7 +30,8 @@ function showDrink () {
 
 // Target 'yes' class under #main-container by using second parameter
 $('#main-container').on('click', '.yes', function () {
-	alert(currentQuestion.getQuestion());
+	// alert(currentQuestion.getQuestion());
+	
 	// Add currentQuestion type to preferences object
 	currentQuestionIndex++;
 	showQuestion();
