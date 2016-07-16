@@ -1,25 +1,26 @@
 var currentQuestionIndex = 0;
 var currentQuestion = null;
 var questionsJson = null;
+var selected_preference = new Preferences();
 
 $.getJSON('options.json', function (data) {
 	questionsJson = data.options;
 	showQuestion();
 });
 
-function showQuestion () {
+function showQuestion (user_preferences) {
 	if (currentQuestionIndex < questionsJson.length) {
 		currentQuestion = new Question(questionsJson[currentQuestionIndex].name, 
 									   questionsJson[currentQuestionIndex].type);
 
 		$('#main-container').html(currentQuestion.getQuestionView());
 	} else {
-		showDrink();
+		showDrink(user_preferences);
 	}
 
 }
 
-function showDrink () {
+function showDrink (user_preferences) {
 	var bartender = new Bartender();
 	// instance of bartender and passing 'create drink' method, passing preferences object -- will return drink to use new drink = bartender.createDrink
 	var newDrink = bartender.createDrink(user_preferences);
@@ -31,7 +32,15 @@ function showDrink () {
 // Target 'yes' class under #main-container by using second parameter
 $('#main-container').on('click', '.yes', function () {
 	// alert(currentQuestion.getQuestion());
-	
+	// hiding or storing data in the UI
+	/*
+	- HTML 5 data attributes
+	- "hard code it as text XXXX"
+	*/
+	console.log($(this));
+	var type = $(this).data("type");
+
+	selected_preference.addPreference({type: type});
 	// Add currentQuestion type to preferences object
 	currentQuestionIndex++;
 	showQuestion();

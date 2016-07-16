@@ -18,7 +18,7 @@ Question.prototype.getQuestionView = function () {
 	this.question,
 	'</h2>',
 	'<div class="question-options">',
-	'<button class="yes">YES</button>',
+	'<button class="yes" data-type="'+this.type+'">YES</button>',
 	'<button class="no">NO</button>',
 	'</div>',
 	].join('');
