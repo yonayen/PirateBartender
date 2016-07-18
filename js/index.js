@@ -41,8 +41,13 @@ $('#main-container').on('click', '.yes', function () {
 	var type = $(this).data("type");
 
 	selected_preference.addPreference({type: type});
+
 	
-	// Add currentQuestion type to preferences object
+	var currentQuestion = new Question ();
+
+	for (var i = 0; i < currentQuestionIndex.length; i++) {
+		// Add currentQuestion type to preferences object
+	}
 	currentQuestionIndex++;
 	showQuestion();
 });
