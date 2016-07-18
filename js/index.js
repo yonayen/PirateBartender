@@ -41,15 +41,25 @@ $('#main-container').on('click', '.yes', function () {
 	var type = $(this).data("type");
 
 	selected_preference.addPreference({type: type});
+	// we have acccess to currentQuestionIndex
+	// var question = questionsJson[currentQuestionIndex]
+
 
 	
-	var currentQuestion = new Question ();
+	// var currentQuestion = new Question ();
 
-	for (var i = 0; i < currentQuestionIndex.length; i++) {
+	// for (var i = 0; i < questionsJson.length; i++) {
 		// Add currentQuestion type to preferences object
-	}
+	// }
 	currentQuestionIndex++;
-	showQuestion();
+	// if (currentQuestionIndex >= questionsJson.length){
+	// 	// you've reached the end
+	// 	selected_preference; // has user prefences inside
+	// 	// show drink 
+	// } else {
+	showQuestion();	
+	// }
+	
 });
 
 $('#main-container').on('click', '.no', function () {
