@@ -31,21 +31,21 @@ function showDrink (user_preferences) {
 // Target 'yes' class under #main-container by using second parameter
 $('#main-container').on('click', '.yes', function () {
 	alert(currentQuestion.getQuestion());
-	// hiding or storing data in the UI
 
+	// hiding or storing data in the UI
 	console.log($(this));
 	var type = $(this).data("type");
 
+	// parameter is the 'type' selected when clicking 'yes'
 	selected_preference.addPreference({type: type});
+
 	// we have acccess to currentQuestionIndex
-	// var question = questionsJson[currentQuestionIndex]
+	var question = questionsJson[currentQuestionIndex]
 
-
-	// var currentQuestion = new Question ();
-
-	// for (var i = 0; i < questionsJson.length; i++) {
+	for (var i = 0; i < questionsJson.length; i++) {
 		// Add currentQuestion type to preferences object
-	// }
+	}
+	
 	currentQuestionIndex++;
 	// if (currentQuestionIndex >= questionsJson.length){
 	// 	// you've reached the end
