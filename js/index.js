@@ -17,7 +17,6 @@ function showQuestion (user_preferences) {
 	} else {
 		showDrink(user_preferences);
 	}
-
 }
 
 function showDrink (user_preferences) {
@@ -33,6 +32,7 @@ function showDrink (user_preferences) {
 $('#main-container').on('click', '.yes', function () {
 	// alert(currentQuestion.getQuestion());
 	// hiding or storing data in the UI
+	
 	/*
 	- HTML 5 data attributes
 	- "hard code it as text XXXX"
