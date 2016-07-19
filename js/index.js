@@ -10,7 +10,7 @@ $.getJSON('options.json', function (data) {
 
 function showQuestion (user_preferences) {
 	if (currentQuestionIndex < questionsJson.length) {
-		currentQuestion = new Question(questionsJson[currentQuestionIndex].name, 
+		currentQuestion = new Question(questionsJson[currentQuestionIndex].name,
 									   questionsJson[currentQuestionIndex].type);
 
 		$('#main-container').html(currentQuestion.getQuestionView());
@@ -32,11 +32,7 @@ function showDrink (user_preferences) {
 $('#main-container').on('click', '.yes', function () {
 	// alert(currentQuestion.getQuestion());
 	// hiding or storing data in the UI
-	
-	/*
-	- HTML 5 data attributes
-	- "hard code it as text XXXX"
-	*/
+
 	console.log($(this));
 	var type = $(this).data("type");
 
@@ -45,7 +41,6 @@ $('#main-container').on('click', '.yes', function () {
 	// var question = questionsJson[currentQuestionIndex]
 
 
-	
 	// var currentQuestion = new Question ();
 
 	// for (var i = 0; i < questionsJson.length; i++) {
@@ -59,7 +54,7 @@ $('#main-container').on('click', '.yes', function () {
 	// } else {
 	showQuestion();	
 	// }
-	
+
 });
 
 $('#main-container').on('click', '.no', function () {
