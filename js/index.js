@@ -30,7 +30,7 @@ function showDrink (user_preferences) {
 
 // Target 'yes' class under #main-container by using second parameter
 $('#main-container').on('click', '.yes', function () {
-	// alert(currentQuestion.getQuestion());
+	alert(currentQuestion.getQuestion());
 	// hiding or storing data in the UI
 
 	console.log($(this));
