@@ -44,8 +44,9 @@ $('#main-container').on('click', '.yes', function () {
 
 	for (var i = 0; i < questionsJson.length; i++) {
 		// Add currentQuestion type to preferences object
+		
 	}
-	
+
 	currentQuestionIndex++;
 	// if (currentQuestionIndex >= questionsJson.length){
 	// 	// you've reached the end

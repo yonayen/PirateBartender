@@ -3,6 +3,11 @@ var Question = function (question, type) {
 	this.question = question;
 	this.type = type;
 };
+var questions = [ {}, {}];
+// var questions = [ new Question(), new Question()]
+// function getQuestion(obj){
+// 	return obj.question;
+// }
 
 Question.prototype.getQuestion = function () {
 	return this.question;
