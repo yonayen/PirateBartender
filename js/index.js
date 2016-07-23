@@ -43,6 +43,7 @@ $('#main-container').on('click', '.yes', function () {
 	var question = questionsJson[currentQuestionIndex]
 
 	for (var i = 0; i < questionsJson.length; i++) {
+		selected_preference.push(question.type);
 		// Add currentQuestion type to preferences object
 	}
 
