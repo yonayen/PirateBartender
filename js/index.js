@@ -48,11 +48,11 @@ $('#main-container').on('click', '.yes', function () {
 	}
 
 	currentQuestionIndex++;
-	// if (currentQuestionIndex >= questionsJson.length){
-	// 	// you've reached the end
-	// 	selected_preference; // has user prefences inside
-	// 	// show drink 
-	// } else {
+	if (currentQuestionIndex >= questionsJson.length){
+		// you've reached the end
+		selected_preference; // has user prefences inside
+		// show drink 
+	} else {
 	showQuestion();	
 	// }
 
