@@ -34,6 +34,7 @@ $('#main-container').on('click', '.yes', function () {
 
 	// hiding or storing data in the UI
 	console.log($(this));
+	
 	var type = $(this).data("type");
 
 	// parameter is the 'type' selected when clicking 'yes'
@@ -48,7 +49,7 @@ $('#main-container').on('click', '.yes', function () {
 	}
 
 	currentQuestionIndex++;
-	
+
 	if (currentQuestionIndex >= questionsJson.length){
 		// you've reached the end
 		selected_preference; // has user prefences inside
