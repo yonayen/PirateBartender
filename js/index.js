@@ -55,6 +55,7 @@ $('#main-container').on('click', '.yes', function () {
 		selected_preference; // has user prefences inside
 		// show drink 
 	} else {
+		
 	showQuestion();	
 	// }
 
