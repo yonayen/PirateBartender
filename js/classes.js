@@ -79,7 +79,11 @@ var Pantry = function () {
 };
 
 Pantry.prototype.getIngredient = function (type) {
-	return this.ingredients[type][Math.floor(Math.random()*this.ingredients[type].length)];
+	var numb = Math.floor(Math.random()*5)
+	console.log(type, "some type");
+	var ingredient = this.ingredients[type][numb]; /* this.ingredients[type].length-1)] */
+	if (ingredient != undefined )
+		return ingredient;
 }
 
 Pantry.prototype.getItemForType = function () {
