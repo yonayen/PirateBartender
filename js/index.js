@@ -8,24 +8,29 @@ $.getJSON('options.json', function(data) {
     showQuestion();
 });
 
-function showQuestion(user_preferences) {
+function showQuestion() {
     if (currentQuestionIndex < questionsJson.length) {
         currentQuestion = new Question(questionsJson[currentQuestionIndex].name,
             questionsJson[currentQuestionIndex].type);
 
         $('#main-container').html(currentQuestion.getQuestionView());
     } else {
-        showDrink(user_preferences);
+        showDrink();
     }
 }
 
-function showDrink(user_preferences) {
+function showDrink() {
     var bartender = new Bartender();
     // instance of bartender and passing 'create drink' method, passing preferences object -- will return drink to use new drink = bartender.createDrink
-    var newDrink = bartender.createDrink(user_preferences);
-
+    var newDrink = bartender.createDrink(selected_preference);
+    console.log(newDrink, 'line 26, new drink');
+    var ingreds = [];
     // Use jQuery to display final drink
-    $('#main-container').append('<h2 class="question-title">' + 'You chose ' + newDrink + '</h2>');
+    for (var i =0; i < newDrink.ingredient.length; i++) {
+        ingreds.push(newDrink.ingredient[i].name);
+    }
+    $('#main-container').empty().append('<h2 class="question-title">' + 'You chose ' + ingreds.join(', ') + '</h2>');
+
 }
 
 // Target 'yes' class under #main-container by using second parameter
@@ -35,19 +40,19 @@ $('#main-container').on('click', '.yes', function() {
 
     // parameter is the 'type' selected when clicking 'yes'
     selected_preference.addPreference({ type: type, choice: true });
-
-    currentQuestionIndex++;
-
-    if (currentQuestionIndex >= questionsJson.length) {
+    console.log('current question', currentQuestionIndex);
+    if (currentQuestionIndex > questionsJson.length) {
+        console.log('current question', currentQuestionIndex);
         console.log('last question', selected_preference);
-        showDrink(selected_preference);
+        showDrink();
     } else {
+        currentQuestionIndex++;
         showQuestion();
     }
-
 });
 
 $('#main-container').on('click', '.no', function() {
+    console.log('current question', currentQuestionIndex);
     currentQuestionIndex++;
     showQuestion();
 });

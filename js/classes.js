@@ -1,3 +1,11 @@
+// [ Question ]
+// [Pantry]
+// [ingredients] [error: cyclic dependency]
+// [Drink] (b'se ingredients)
+// [main file runs above]
+
+
+
 // Question Object
 var Question = function(question, type) {
     this.question = question;
@@ -79,14 +87,15 @@ var Pantry = function() {
 };
 
 Pantry.prototype.getIngredient = function(type) {
-    var numb = Math.floor(Math.random() * 5)
-    console.log(type, "some type");
-    if (this.ingredients[type] !== undefined) {
-        var ingredient = this.ingredients[type][numb]; /* this.ingredients[type].length-1)] */
-        if (ingredient != undefined) {
-            return ingredient;
-        }
-    }
+    var numb = Math.floor(Math.random() * 3)
+    console.log(type, "some type", this.ingredients[type.type]);
+    return this.ingredients[type.type][numb];
+    //if (this.ingredients[type] !== undefined) {
+      //  var ingredient = this.ingredients[type][numb];  this.ingredients[type].length-1)] 
+        //if (ingredient != undefined) {
+          //  return ingredient;
+        //}
+    //}
 }
 
 Pantry.prototype.getItemForType = function() {
@@ -108,7 +117,8 @@ var Bartender = function() {
 }
 
 Bartender.prototype.createDrink = function(user_preferences) {
-    if (user_preferences.preferences.length > 0) {
+    console.log(user_preferences, "user_preferences; line 111")
+    if (user_preferences != undefined && user_preferences.preferences.length > 0) {
 
         var pantry = new Pantry();
         var drink = new Drink();
