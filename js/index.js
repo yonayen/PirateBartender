@@ -29,6 +29,8 @@ function showDrink() {
     for (var i =0; i < newDrink.ingredient.length; i++) {
         ingreds.push(newDrink.ingredient[i].name);
     }
+    
+    // empty the question container before appending the final drink is displayed
     $('#main-container').empty().append('<h2 class="question-title">' + 'You chose ' + ingreds.join(', ') + '</h2>');
 
 }
