@@ -44,8 +44,8 @@ $('#main-container').on('click', '.yes', function() {
     selected_preference.addPreference({ type: type, choice: true });
     // console.log('current question', currentQuestionIndex);
     if (currentQuestionIndex > questionsJson.length) {
-        console.log('current question', currentQuestionIndex);
-        console.log('last question', selected_preference);
+        // console.log('current question', currentQuestionIndex);
+        // console.log('last question', selected_preference);
         showDrink();
     } else {
         currentQuestionIndex++;
