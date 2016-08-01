@@ -54,7 +54,7 @@ $('#main-container').on('click', '.yes', function() {
 });
 
 $('#main-container').on('click', '.no', function() {
-    console.log('current question', currentQuestionIndex);
+    // console.log('current question', currentQuestionIndex);
     currentQuestionIndex++;
     showQuestion();
 });
