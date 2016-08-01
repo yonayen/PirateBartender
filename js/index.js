@@ -23,7 +23,7 @@ function showDrink() {
     var bartender = new Bartender();
     // instance of bartender and passing 'create drink' method, passing preferences object -- will return drink to use new drink = bartender.createDrink
     var newDrink = bartender.createDrink(selected_preference);
-    console.log(newDrink, 'line 26, new drink');
+    // console.log(newDrink, 'line 26, new drink');
     var ingreds = [];
     // Use jQuery to display final drink
     for (var i =0; i < newDrink.ingredient.length; i++) {
