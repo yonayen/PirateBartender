@@ -88,7 +88,7 @@ var Pantry = function() {
 
 Pantry.prototype.getIngredient = function(type) {
     var numb = Math.floor(Math.random() * 3)
-    console.log(type, "some type", this.ingredients[type.type]);
+    // console.log(type, "some type", this.ingredients[type.type]);
     return this.ingredients[type.type][numb];
     //if (this.ingredients[type] !== undefined) {
       //  var ingredient = this.ingredients[type][numb];  this.ingredients[type].length-1)] 
@@ -117,7 +117,7 @@ var Bartender = function() {
 }
 
 Bartender.prototype.createDrink = function(user_preferences) {
-    console.log(user_preferences, "user_preferences; line 111")
+    // console.log(user_preferences, "user_preferences; line 111")
     if (user_preferences != undefined && user_preferences.preferences.length > 0) {
 
         var pantry = new Pantry();
